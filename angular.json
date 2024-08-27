@@ -5,7 +5,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "demo": {
+    "todo-app": {
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -29,7 +29,7 @@
             "assets": [],
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "outputPath": "dist/demo",
+            "outputPath": "dist/todo-app",
             "scripts": [],
             "styles": ["src/global_styles.css"],
             "tsConfig": "tsconfig.app.json"
@@ -38,17 +38,15 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "demo:build",
             "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "development": {
-              "buildTarget": "demo:build:development",
-              "browserTarget": "demo:build:development",
+              "buildTarget": "todo-app:build:development",
               "proxyConfig": "src/proxy.conf.json"
             },
             "production": {
-              "buildTarget": "demo:build:production"
+              "buildTarget": "todo-app:build:production"
             }
           },
           "defaultConfiguration": "development"
